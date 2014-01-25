@@ -1,7 +1,8 @@
 {
     "manifest_version": 2,
 
-    "name": "mail.ru счетчик непрочитанных писем (BETA)",
+    "name": "Mail.Ru счетчик непрочитанных писем (BETA)",
+    "short_name": "Mail.Ru favicon counter",
     "version": "0.0.2",
     "description": "отображает количество непрочитанных писем в почты mail.ru в фавиконке",
 
