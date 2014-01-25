@@ -12,14 +12,16 @@
         "128": "icon.png"
     },
 
-        "permissions": [
-             "https://e.mail.ru/*"   
-        ],
-        "content_scripts": [
-            {
-              "matches": ["https://e.mail.ru/*"],
-              "js": ["favico.js", "counter.js"],
-              "run_at": "document_end"
-            }
-        ]
+    "permissions": [
+         "https://e.mail.ru/*",
+         "storage"
+    ],
+    "content_scripts": [
+        {
+          "matches": ["https://e.mail.ru/*"],
+          "js": ["favico.js", "counter.js"],
+          "run_at": "document_end"
+        }
+    ],
+    "options_page": "options.html"
  }
