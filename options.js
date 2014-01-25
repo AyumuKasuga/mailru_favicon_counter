@@ -1,3 +1,12 @@
+chrome.storage.onChanged.addListener(function() {
+    chrome.tabs.query({'url': 'https://e.mail.ru/*'}, function(tabs){
+        for (var i=0; i<tabs.length; i++){
+            tab = tabs[i]
+            chrome.tabs.update(tab.id, {'url': tab.url})
+        }
+    });
+});
+
 function load_settings(){
     chrome.storage.sync.get(function(settings){
         for(var key in settings){
