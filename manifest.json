@@ -3,7 +3,7 @@
 
     "name": "Mail.Ru счетчик непрочитанных писем (BETA)",
     "short_name": "Mail.Ru favicon counter",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "description": "отображает количество непрочитанных писем в почте mail.ru в фавиконке",
 
     "icons": {
