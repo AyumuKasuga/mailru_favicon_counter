@@ -9,10 +9,14 @@ chrome.storage.onChanged.addListener(function() {
 
 function load_settings(){
     chrome.storage.sync.get(function(settings){
+        console.log(settings);
         for(var key in settings){
             var value = settings[key];
             if(key == 'onlynew'){
-                document.querySelector('[name="onlynew"]').checked = settings.onlynew;
+                document.querySelector('[name="onlynew"]').checked = value;
+            }
+            else if(key == 'shape'){
+                document.querySelector('[name="shape"]').value = value;
             }
         }
     });
@@ -21,6 +25,7 @@ function load_settings(){
 function save_settings(){
     var settings = {};
     settings.onlynew = document.querySelector('[name="onlynew"]').checked;
+    settings.shape = document.querySelector('[name="shape"]').value;
     chrome.storage.sync.set(settings);
 }
 
